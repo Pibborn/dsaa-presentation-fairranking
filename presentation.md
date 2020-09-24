@@ -166,7 +166,7 @@ L(\Delta y,\Delta s,x_1,x_2)&=L_{\text{rank}}(\Delta y,x_1,x_2)\\&+\gamma L_{o_{
 
 
 ---
-
+![w:700px](img/adult_ranker_2d_plot.pdf.png)
 space for experimental results and discussion...
 
 ---
