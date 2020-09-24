@@ -30,7 +30,7 @@ Roberto Esposito<sup><img src="img/unito.png" width="30px"></img></sup>, Stefan 
 --- 
 
 <!-- paginate: true -->
-<!-- footer: Cerrato, Köppel, Segner, Esposito, Kramer. Fair Pairwise Learning to Rank. DSAA 2020.
+<!-- footer: Cerrato, Fair Pairwise Learning to Rank. DSAA 2020.
 -->
 
 # The Fairness Problem
@@ -115,11 +115,9 @@ $$
 
 ---
 
-<!-- _footer: _ -->   
-
 ## Fair Adversarial DirectRanker
 
-![w:700px](img/ranker_adv_2.pdf-1.jpg)
+![w:700px](img/ranker_adv.png)
 
 
 ---
@@ -146,7 +144,7 @@ L_{\text{bias},i}(s,x)&=-s\log(nn_{i\,bias}(x)) \\ &-(1-s)\log(1-nn_{i\,bias}(x)
 
 ## Fair Flipped DirectRanker
 
-![w:700px](img/ranker_flip_2.pdf-1.jpg)
+![w:700px](img/ranker_flip.png)
 
 
 ---
