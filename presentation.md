@@ -55,7 +55,7 @@ If the data contains **biases** against a specific group of people, those can al
 
 # The Fairness Problem in Ranking
 
-$$ D = \{(q_i, x_i, s_i, y_i) \; i \in \{1 .. N\}\} $$
+$$ D = \{(q_i, x_i, s_i, y_i) \;\mid\; i \in \{1 .. N\}\} $$
 
 $q_i$ : queries
 $x_i$: features
@@ -74,7 +74,7 @@ $s_i$: sensitive attribute
 
 ## Normalized Discounted Difference (rND)
 
-$$\text{rND} = \frac{1}{Z} \sum_{i \in \{10, 20, ...\}}^N \frac{1}{log_{2}i} \mid \frac{ \mid S^{+}_{1...i} \mid}{i} - \frac{\mid S^+ \mid}{N} \mid $$
+$$\text{rND} = \frac{1}{Z} \sum_{i \in \{10, 20, ...\}}^N \frac{1}{\log_{2}i} \left\vert \frac{ \mid S^{+}_{1...i} \mid}{i} - \frac{\mid S^+ \mid}{N} \right\vert $$
 
 $\frac{ \mid S^{+}_{1...i} \mid}{i}$: proportion of protected individuals in the top-$i$ documents
 $\frac{\mid S^+ \mid}{N}$: proportion of protected individuals in the overall population/query
