@@ -72,26 +72,6 @@ $s_i$: sensitive attribute
 
 ---
 
-## Normalized Discounted Difference (rND)
-
-$$\text{rND} = \frac{1}{Z} \sum_{i \in \{10, 20, ...\}}^N \frac{1}{\log_{2}i} \left\vert \frac{ \mid S^{+}_{1...i} \mid}{i} - \frac{\mid S^+ \mid}{N} \right\vert $$
-
-$\frac{ \mid S^{+}_{1...i} \mid}{i}$: proportion of protected individuals in the top-$i$ documents
-$\frac{\mid S^+ \mid}{N}$: proportion of protected individuals in the overall population/query
-
-**Values close to 0** are desirable.
-
----
-
-## Group-Dependendent Pairwise Accuracy (GPA)
-
-$G_1, ..., G_K$: a set of K groups
-$A_{G_i > G_j}$: group-dependent pairwise accuracy - i.e. ranker accuracy on documents which are labelled more relevant and belong to group $i$; and ranker accuracy on documents which are labelled less relevant and belong to group $j$.
-
-$|A_{G_i > G_j} - A_{G_j > G_i}|$ **should be close to 0**.
-
----
-
 ## DirectRanker
 
 ![w:750px](img/ranker_base.png)
@@ -223,7 +203,52 @@ Models:
 <br>
 
 * Relevance Evaluation: nDCG
-* Fairness Evaluation: GPA and rND
+* Fairness Evaluation: disparate impact (**rND**) and disparate mistreatment (**GPA**)
 
 ---
 
+
+## Normalized Discounted Difference (rND)
+
+$$\text{rND} = \frac{1}{Z} \sum_{i \in \{10, 20, ...\}}^N \frac{1}{\log_{2}i} \left\vert \frac{ \mid S^{+}_{1...i} \mid}{i} - \frac{\mid S^+ \mid}{N} \right\vert $$
+
+$\frac{ \mid S^{+}_{1...i} \mid}{i}$: proportion of protected individuals in the top-$i$ documents
+$\frac{\mid S^+ \mid}{N}$: proportion of protected individuals in the overall population/query
+
+**Values close to 0** are desirable.
+
+---
+
+## Group-Dependendent Pairwise Accuracy (GPA)
+
+$G_1, ..., G_K$: a set of K groups
+$A_{G_i > G_j}$: group-dependent pairwise accuracy - i.e. ranker accuracy on documents which are labelled more relevant and belong to group $i$; and ranker accuracy on documents which are labelled less relevant and belong to group $j$.
+
+$|A_{G_i > G_j} - A_{G_j > G_i}|$ **should be close to 0**.
+
+---
+
+## Experimental Results (law, race)
+
+![w:600px](img/law-race_ranker_2d_plot.pdf.png)
+
+---
+
+## Experimental Results (law, race)
+
+![w:600px](img/law-race_ranker1-GPAFFDR_ADV_2d_plot_gpa.pdf.png)
+
+---
+
+## Takeaways and Future Work
+
+* When compared to other models, our framework is able to learn fair rankings **on different evaluation metrics**
+* The Fair DirectRanker models work in both **disparate impact** and **disparate mistreatment** settings
+* Using the noise module in other ranking models can be beneficial in terms of fairness (DELTR)
+
+---
+
+![bg blur:5px opacity:0.2](img/unito.png)
+![bg blur:10px opacity:0.2](img/mainz.jpg)
+
+# Thank you!
