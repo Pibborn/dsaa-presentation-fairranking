@@ -30,7 +30,7 @@ Roberto Esposito<sup><img src="img/unito.png" width="30px"></img></sup>, Stefan 
 --- 
 
 <!-- paginate: true -->
-<!-- footer: Cerrato, Fair Pairwise Learning to Rank. DSAA 2020.
+<!-- footer: Cerrato et al., Fair Pairwise Learning to Rank. DSAA 2020.
 -->
 
 # The Fairness Problem
@@ -89,6 +89,13 @@ $G_1, ..., G_K$: a set of K groups
 $A_{G_i > G_j}$: group-dependent pairwise accuracy - i.e. ranker accuracy on documents which are labelled more relevant and belong to group $i$; and ranker accuracy on documents which are labelled less relevant and belong to group $j$.
 
 $|A_{G_i > G_j} - A_{G_j > G_i}|$ **should be close to 0**.
+
+---
+
+## DirectRanker
+
+![w:750px](img/ranker_base.png)
+
 
 ---
 
@@ -180,4 +187,32 @@ L(\Delta y,\Delta s,x_1,x_2)&=(\Delta y-o_1(x_1,x_2))^2\\&+ \gamma_1 *(\Delta s-
 
 ---
 
+## Noise Module
+<br>
+
+![w:700px](img/noise-model.png)
+
+---
+
+## Experimental Setting
+
+Datasets:
+
+* COMPAS
+* Law (race/gender)
+* Adult
+* Wiki Talk
+
+---
+
+## Experimental Setting
+
+* Baseline unfair ranker
+* DELTR (Zehlike et al. 2019), "fair listnet"
+* Adversarial Fair DirectRanker (ADV DR)
+* Fair Flipped DirectRanker (FF DR)
+* Adversarial Flipped Fair DirectRanker (ADV FF DR)
+* Including, or not including, a noise module (e.g. ADV DR n.)
+
+---
 
