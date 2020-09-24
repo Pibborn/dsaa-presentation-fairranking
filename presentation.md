@@ -207,12 +207,23 @@ Datasets:
 
 ## Experimental Setting
 
+Models:
+
 * Baseline unfair ranker
 * DELTR (Zehlike et al. 2019), "fair listnet"
 * Adversarial Fair DirectRanker (ADV DR)
 * Fair Flipped DirectRanker (FF DR)
 * Adversarial Flipped Fair DirectRanker (ADV FF DR)
 * Including, or not including, a noise module (e.g. ADV DR n.)
+
+---
+
+## Experimental Setting
+
+<br>
+
+* Relevance Evaluation: nDCG
+* Fairness Evaluation: GPA and rND
 
 ---
 
