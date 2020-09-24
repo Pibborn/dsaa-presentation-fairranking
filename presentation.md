@@ -222,7 +222,7 @@ $\frac{\mid S^+ \mid}{N}$: proportion of protected individuals in the overall po
 ## Group-Dependendent Pairwise Accuracy (GPA)
 
 $G_1, ..., G_K$: a set of K groups
-$A_{G_i > G_j}$: group-dependent pairwise accuracy - i.e. ranker accuracy on documents which are labelled more relevant and belong to group $i$; and ranker accuracy on documents which are labelled less relevant and belong to group $j$.
+$A_{G_i > G_j}$: group-dependent pairwise accuracy - i.e. ranking accuracy on documents which are labeled more relevant and belong to group $i$; and ranker accuracy on documents which are labeled less relevant and belong to group $j$.
 
 $|A_{G_i > G_j} - A_{G_j > G_i}|$ **should be close to 0**.
 
