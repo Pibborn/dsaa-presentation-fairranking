@@ -20,8 +20,9 @@ Roberto Esposito<sup><img src="img/unito.png" width="30px"></img></sup>, Stefan 
 
 <br><br>
 
-<img src="img/unito.png" width="50px" style="text-align:center"></img>: Università degli Studi di Torino, Torino, Italy
-<img src="img/mainz.jpg" width="50px" style="text-align:center"></img>: Johannes Gutenberg-Universität, Mainz, Germany
+<div><img src="img/unito.png" width="50px" style="text-align:center;position:relative;top:18px"></img> : Università degli Studi di Torino, Torino, Italy
+
+<img src="img/mainz.jpg" width="50px" style="text-align:center;position:relative;top:18px"></img> : Johannes Gutenberg-Universität, Mainz, Germany
 
 </span>
 
@@ -163,13 +164,22 @@ L_{\text{bias},i}(s,x)&=-s\log(nn_{i\,bias}(x)) \\ &-(1-s)\log(1-nn_{i\,bias}(x)
 
 $$
 \begin{aligned}
-L(\Delta y,\Delta s,x_1,x_2)&=L_{\text{rank}}(\Delta y,x_1,x_2)\\&+\gamma L_{o_{bias}}(\Delta s,x_1,x_2)   
+L(\Delta y,\Delta s,x_1,x_2)&=(\Delta y-o_1(x_1,x_2))^2\\&+ \gamma * (\Delta s-o_{bias}(x_1,x_2))^2 
 \end{aligned}$$
 
 
 ---
 
-space for experimental results and discussion...
+## Adversarial, Flipped DirectRanker
+
+<br> <br>
+
+
+$$
+\begin{aligned}
+L(\Delta y,\Delta s,x_1,x_2)&=(\Delta y-o_1(x_1,x_2))^2\\&+ \gamma_1 *(\Delta s-o_{bias}(x_1,x_2))^2 \\ &+ \gamma_2 * (-s\log(nn_{i\,bias}(x)) -(1-s)\log(1-nn_{i\,bias}(x)))
+\end{aligned}$$
 
 ---
+
 
